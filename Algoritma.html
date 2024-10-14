@@ -176,7 +176,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika.html">Logika Matematika</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Algoritma</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Aljabar.html">Aljabar Boolean dan Gerbang Logika</a></li>
@@ -440,15 +440,20 @@ document.write(`
 </tbody>
 </table>
 </div>
-<p>Contoh Pythonnya:
-def sequentialSearch(arr, target):
-for i in range(len(arr)):
-if arr[i] == target:
-return i
-return -1</p>
-<p>arr = [5, 3, 8, 4, 2]
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def sequentialSearch(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+# Contoh penggunaan
+arr = [5, 3, 8, 4, 2]
 target = 4
-print(sequentialSearch(arr, target))  # Output: 3</p>
+print(sequentialSearch(arr, target))  # Output: 3
+
+</pre></div>
+</div>
 </section>
 <section id="pseudocode">
 <h2>Pseudocode<a class="headerlink" href="#pseudocode" title="Link to this heading">#</a></h2>
@@ -481,29 +486,28 @@ print(sequentialSearch(arr, target))  # Output: 3</p>
 </tbody>
 </table>
 </div>
-<p>Langkah-langkah Binary Search:
-Iterasi 1:
-Left: 0, Right: 4, Mid: 2
-Elemen Tengah: 4
-Target: 4
-Keterangan: Cocok, kembalikan index 2</p>
-<p>Contoh Pythonnya:
-def binarySearch(arr, target):
-left, right = 0, len(arr) - 1
-while left &lt;= right:
-mid = (left + right) // 2
-print(f”Iterasi: {arr[left:right+1]}, Left: {left}, Right: {right}, Mid: {mid}, Elemen Tengah: {arr[mid]}”)
-if arr[mid] == target:
-return mid
-elif arr[mid] &lt; target:
-left = mid + 1
-else:
-right = mid - 1
-return -1</p>
-<p>arr = [2, 3, 4, 5, 8]
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def binarySearch(arr, target):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        print(f&quot;Iterasi: {arr[left:right+1]}, Left: {left}, Right: {right}, Mid: {mid}, Elemen Tengah: {arr[mid]}&quot;)
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] &lt; target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+# Contoh penggunaan
+arr = [2, 3, 4, 5, 8]
 target = 4
 index = binarySearch(arr, target)
-print(f”Index dari target {target} adalah {index}”)</p>
+print(f&quot;Index dari target {target} adalah {index}&quot;)
+
+</pre></div>
+</div>
 </section>
 <section id="big-o-algoritma">
 <h2>Big O Algoritma<a class="headerlink" href="#big-o-algoritma" title="Link to this heading">#</a></h2>
@@ -606,6 +610,22 @@ print(f”Index dari target {target} adalah {index}”)</p>
 </tr>
 </tbody>
 </table>
+</div>
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def sequentialSearch(arr, target):
+    for i in range(len(arr)):
+        print(f&quot;Iterasi: {i + 1}, Elemen: {arr[i]}, Target: {target}, Keterangan: {&#39;Cocok, selesai&#39; if arr[i] == target else &#39;Tidak cocok&#39;}&quot;)
+        if arr[i] == target:
+            return i
+    return -1
+
+# Contoh penggunaan
+arr = [5, 3, 1, 4, 6, 7, 2, 9, 0, 8]
+target = 8
+index = sequentialSearch(arr, target)
+print(f&quot;Index dari target {target} adalah {index}&quot;)
+
+</pre></div>
 </div>
 <p>Jumlah total perbandingan dalam kasus terburuk adalah 10, sehingga kompleksitas waktunya adalah <span class="math notranslate nohighlight">\(O(n)\)</span> dan kompleksitas ruangnya adalah <span class="math notranslate nohighlight">\(O(1)\)</span>.</p>
 </section>

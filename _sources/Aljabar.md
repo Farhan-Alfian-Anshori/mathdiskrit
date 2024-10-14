@@ -1,123 +1,147 @@
-# Algoritma
-## Definisi
-Algoritma adalah serangkaian instruksi atau langkah-langkah yang jelas dan terperinci untuk menyelesaikan masalah atau menjalankan tugas tertentu. Algoritma dapat diimplementasikan dalam berbagai bahasa pemrograman untuk memecahkan masalah komputasi. Contoh sederhana dari algoritma adalah resep masakan, di mana terdapat langkah-langkah berurutan untuk mencapai hasil akhir.
+# Aljabar Boolean dan Gerbang Logika
+## Aljabar Boolean
+Pengertian Aljabar Boolean: Aljabar Boolean adalah cabang matematika yang berkaitan dengan operasi logika dan variabel biner. Variabel biner ini hanya memiliki dua nilai, yaitu 1 (benar) dan 0 (salah). Aljabar Boolean digunakan untuk menyederhanakan dan menganalisis rangkaian logika.
 
-## Algoritma Sequential Search
-Algoritma Sequential Search adalah metode pencarian yang memeriksa setiap elemen dalam daftar satu per satu sampai elemen yang dicari ditemukan atau daftar berakhir. Ini adalah metode pencarian paling sederhana tetapi kurang efisien untuk daftar yang sangat besar.
+## Tujuan
+Tujuan utama Aljabar Boolean adalah untuk menyediakan metode matematika dalam mendesain dan menganalisis sirkuit digital. Hal ini memungkinkan insinyur untuk menyederhanakan fungsi logika dan meminimalkan penggunaan gerbang logika dalam rangkaian elektronik.
 
-Contoh Algoritma Sequential Search: Misalkan kita memiliki daftar [5, 3, 8, 4, 2] dan kita mencari elemen 4:
-| Index | Elemen | Target | Keterangan             |
-|-------|--------|--------|------------------------|
-| 0     | 5      | 4      | Tidak cocok            |
-| 1     | 3      | 4      | Tidak cocok            |
-| 2     | 8      | 4      | Tidak cocok            |
-| 3     | 4      | 4      | Cocok, kembalikan index|
-| 4     | 2      | 4      | (Tidak dicapai)        |
+## Operator Biner & Uner:
 
-Contoh kode python:
-```python=
-def sequentialSearch(arr, target):
-    for i in range(len(arr)):
-        if arr[i] == target:
-            return i
-    return -1
+### Operator Biner:
 
-# Contoh penggunaan
-arr = [5, 3, 8, 4, 2]
-target = 4
-print(sequentialSearch(arr, target))  # Output: 3
+AND ($\cdot$ atau ∗): Menghasilkan 1 jika kedua operannya 1. $$A \cdot B = C$$
 
-```
+Contoh:
+|$A$|$B$|$A \cdot B$|
+|---|---|-----------|
+| 0 | 0 |    0      |
+| 0 | 1 |    0      |
+| 1 | 0 |    0      |
+| 1 | 1 |    1      |
 
 
 
-## Pseudocode
-Pseudocode adalah cara menulis algoritma dengan menggunakan bahasa yang mirip dengan bahasa manusia, namun tetap menggambarkan logika pemrograman. Pseudocode tidak mengikuti aturan sintaksis bahasa pemrograman tertentu, sehingga lebih mudah dipahami oleh siapa saja, baik yang berpengalaman maupun pemula. Pseudocode berfungsi sebagai panduan sebelum menulis kode nyata.
+OR (+): Menghasilkan 1 jika salah satu atau kedua operannya 1. $$A + B = C$$
 
-## Algoritma Binary Search
-Algoritma Binary Search adalah metode pencarian yang efisien pada daftar yang sudah diurutkan. Algoritma ini membagi daftar menjadi dua bagian, membandingkan elemen tengah dengan target, dan mengulangi proses pada setengah bagian yang relevan. Binary Search lebih cepat dibandingkan Sequential Search untuk daftar yang besar.
+Contoh:
+|$A$|$B$|$A + B$ |
+|---|---|--------|
+| 0 | 0 |   0    |
+| 0 | 1 |   1    |
+| 1 | 0 |   1    |
+| 1 | 1 |   1    |
 
-Contoh Algoritma Binary Search: Misalkan kita memiliki daftar [2, 3, 4, 5, 8] yang sudah diurutkan, dan kita mencari elemen 4:
-| Iterasi | Left | Right | Mid | Elemen Tengah | Target | Keterangan                       |
-|---------|------|-------|-----|---------------|--------|----------------------------------|
-| 1       | 0    | 4     | 2   | 4             | 4      | Cocok, kembalikan index           |
 
-Contoh kode python:
-```python=
-def binarySearch(arr, target):
-    left, right = 0, len(arr) - 1
-    while left <= right:
-        mid = (left + right) // 2
-        print(f"Iterasi: {arr[left:right+1]}, Left: {left}, Right: {right}, Mid: {mid}, Elemen Tengah: {arr[mid]}")
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] < target:
-            left = mid + 1
-        else:
-            right = mid - 1
-    return -1
+XOR ($\oplus$): Menghasilkan 1 jika kedua operan berbeda. $$A \oplus B = C$$
 
-# Contoh penggunaan
-arr = [2, 3, 4, 5, 8]
-target = 4
-index = binarySearch(arr, target)
-print(f"Index dari target {target} adalah {index}")
+Contoh:
+| $A$ |$B$ | $A \oplus B$ |
+|-----|----|--------------|
+| 0   | 0  |   0          |
+| 0   | 1  |   1          |
+| 1   | 0  |   1          |
+| 1   | 1  |   0          |
 
-```
-## Big O Algoritma
-Big O Notation adalah cara untuk mengukur kompleksitas waktu atau ruang dari sebuah algoritma dalam hal ukuran input. Ini memberikan gambaran seberapa cepat atau lambat algoritma tumbuh seiring dengan peningkatan ukuran input.
 
-Tabel Big O Notation:
-| Algoritma             | Kompleksitas Waktu | Kompleksitas Ruang |
-|-----------------------|--------------------|--------------------|
-| Sequential Search     | $O(n)$             | $O(1)$             |
-| Binary Search         | $O(\log n)$        | $O(1)$             |
-| Bubble Sort           | $O(n^2)$           | $O(1)$             |
-| Merge Sort            | $O(n \log n)$      | $O(n)$             |
-| Quick Sort            | $O(n \log n)$      | $O(\log n)$        |
+### Operator Uner:
 
-## Hitung Big O dari Algoritma Sequential Search
-Algoritma Sequential Search memiliki kompleksitas waktu $O(n)$ karena dalam kasus terburuk, setiap elemen dalam daftar harus diperiksa sekali. Kompleksitas ruangnya adalah $O(1)$ karena tidak membutuhkan ruang tambahan yang bergantung pada ukuran input.
+NOT ($\overline{A}$ atau $\neg A$): Menghasilkan kebalikan dari nilai operan. $$\overline{A} = A'$$
 
-Contoh Penghitungan Big O: Misalkan kita memiliki daftar dengan 10 elemen dan mencari elemen yang berada di posisi terakhir:
-| Iterasi | Elemen     | Target | Keterangan     |
-|---------|------------|--------|----------------|
-| 1       | 5          | 8      | Tidak cocok    |
-| 2       | 3          | 8      | Tidak cocok    |
-| 3       | 1          | 8      | Tidak cocok    |
-| 4       | 4          | 8      | Tidak cocok    |
-| 5       | 6          | 8      | Tidak cocok    |
-| 6       | 7          | 8      | Tidak cocok    |
-| 7       | 2          | 8      | Tidak cocok    |
-| 8       | 9          | 8      | Tidak cocok    |
-| 9       | 0          | 8      | Tidak cocok    |
-| 10      | 8          | 8      | Cocok, selesai |
+Contoh: 
+| $A$ | $\overline{A}$ |
+|-----|----------------|
+| 0   |      1         |
+| 1   |      0         |
 
-Contoh kode python:
-```python=
-def sequentialSearch(arr, target):
-    for i in range(len(arr)):
-        print(f"Iterasi: {i + 1}, Elemen: {arr[i]}, Target: {target}, Keterangan: {'Cocok, selesai' if arr[i] == target else 'Tidak cocok'}")
-        if arr[i] == target:
-            return i
-    return -1
 
-# Contoh penggunaan
-arr = [5, 3, 1, 4, 6, 7, 2, 9, 0, 8]
-target = 8
-index = sequentialSearch(arr, target)
-print(f"Index dari target {target} adalah {index}")
 
-```
-Jumlah total perbandingan dalam kasus terburuk adalah 10, sehingga kompleksitas waktunya adalah $O(n)$ dan kompleksitas ruangnya adalah $O(1)$.
+## Manfaat
+Aljabar Boolean sangat berguna dalam pemrograman, terutama dalam pengambilan keputusan dan pernyataan kondisional. Contoh penggunaan termasuk:
+
+-Mengontrol alur program dengan pernyataan if-else.
+
+-Meningkatkan efisiensi kode dengan menyederhanakan ekspresi logika.
+
+-Memvalidasi kondisi tertentu dalam algoritma pencarian dan pengurutan.
+
+## Gerbang Logika (Logic Gates)
+Gerbang logika adalah blok dasar dari rangkaian digital yang melakukan operasi logika pada satu atau lebih sinyal input biner dan menghasilkan sinyal output biner. Gerbang logika digunakan untuk membangun sirkuit digital yang dapat melakukan berbagai fungsi komputasi.
+
+## Jenis-Jenis Logic Gates:
+
+Gerbang AND: Menghasilkan output 1 hanya jika semua inputnya 1.
+| $A$ | $B$ | $A \cdot B$ |
+|-----|-----|-------------|
+| 0   | 0   |    0        |
+| 0   | 1   |    0        |
+| 1   | 0   |    0        |
+| 1   | 1   |    1        |
+
+
+Gerbang OR: Menghasilkan output 1 jika salah satu atau semua inputnya 1.
+|$A$|$B$|$A + B$ |
+|---|---|--------|
+| 0 | 0 |   0    |
+| 0 | 1 |   1    |
+| 1 | 0 |   1    |
+| 1 | 1 |   1    |
+
+
+Gerbang NOT:
+| $A$ | $\overline{A}$ |
+|-----|--------------  |
+| 0   |      1         |
+| 1   |      0         |
+
+
+
+Gerbang NAND: Menghasilkan output 0 hanya jika semua inputnya 1.
+| $A$ | $B$ | $\overline{A \cdot B}$ |
+|-----|-----|------------------------|
+| 0   | 0   |          1             |
+| 0   | 1   |          1             |
+| 1   | 0   |          1             |
+| 1   | 1   |          0             |
+
+
+
+Gerbang NOR: Menghasilkan output 0 jika salah satu atau semua inputnya 1.
+| $A$ | $B$ | $\overline{A + B}$ |
+|-----|-----|--------------------|
+| 0   | 0   |        1           |
+| 0   | 1   |        0           |
+| 1   | 0   |        0           |
+| 1   | 1   |        0           |
+
+
+
+Gerbang XOR: Menghasilkan output 1 jika inputnya berbeda. 
+| $A$ | $B$ | $A \oplus B$ |
+|-----|-----|--------------|
+| 0   | 0   |     0        |
+| 0   | 1   |     1        |
+| 1   | 0   |     1        |
+| 1   | 1   |     0        |
+
+
+Gerbang XNOR: Menghasilkan output 1 jika inputnya sama. 
+| $A$ | $B$ | $\overline{A \oplus B}$ |
+|-----|-----|-------------------------|
+| 0   | 0   |          1              |
+| 0   | 1   |          0              |
+| 1   | 0   |          0              |
+| 1   | 1   |          1              |
+
 
 ## Referensi
-Referensi:
+Aljabar Boolean - Pengertian, Hukum, dan Contoh Soal1
+. (2019). Webstudi. Diakses pada 14 Oktober 2024 dari https://www.webstudi.site/2019/02/aljabar-boolean.html1
+.
 
-Algoritma: Pengertian, Sejarah, Jenis, Fungsi, dan Contohnya. (n.d.). Gramedia Literasi Matematika. Diakses pada 7 Oktober 2024 dari https://www.gramedia.com/literasi/pengertian-algoritma/.
+Gerbang Logika: Pengertian, Jenis dan Simbolnya1
+. (n.d.). Teknik Elektronik. Diakses pada 14 Oktober 2024 dari https://teknikece.com/gerbang-logika/1
+.
 
-Algoritma: Definisi, Ciri, Jenis, Struktur dan Contohnya. (2021). Tirto.ID. Diakses pada 7 Oktober 2024 dari https://tirto.id/algoritma-definisi-ciri-jenis-struktur-dan-contohnya-gjgn.
-
-Algoritma dan Pemrograman: Buku Bahan Ajar. (2021). Google Books. Diakses pada 7 Oktober 2024 dari https://books.google.com/books?id=2UpEEAAAQBAJ.
-
-Open Library - Buku Algoritma Dan Pemrograman. (n.d.). Telkom University. Diakses pada 7 Oktober 2024 dari https://openlibrary.telkomuniversity.ac.id/home/catalog/id/165210/slug/buku-algoritma-dan-pemrograman.html.
+Pengertian Gerbang Logika: Fondasi Sistem Digital Modern1
+. (n.d.). Wiki Elektronika. Diakses pada 14 Oktober 2024 dari https://wikielektronika.com/pengertian-gerbang-logika/1
+.

@@ -14,16 +14,21 @@ Contoh Algoritma Sequential Search: Misalkan kita memiliki daftar [5, 3, 8, 4, 2
 | 3     | 4      | 4      | Cocok, kembalikan index|
 | 4     | 2      | 4      | (Tidak dicapai)        |
 
-Contoh Pythonnya:
+Contoh kode python:
+```python=
 def sequentialSearch(arr, target):
     for i in range(len(arr)):
         if arr[i] == target:
             return i
     return -1
 
+# Contoh penggunaan
 arr = [5, 3, 8, 4, 2]
 target = 4
 print(sequentialSearch(arr, target))  # Output: 3
+
+```
+
 
 
 ## Pseudocode
@@ -35,16 +40,10 @@ Algoritma Binary Search adalah metode pencarian yang efisien pada daftar yang su
 Contoh Algoritma Binary Search: Misalkan kita memiliki daftar [2, 3, 4, 5, 8] yang sudah diurutkan, dan kita mencari elemen 4:
 | Iterasi | Left | Right | Mid | Elemen Tengah | Target | Keterangan                       |
 |---------|------|-------|-----|---------------|--------|----------------------------------|
-| 1       | 0    | 4     | 2   | 4             | 4      | Cocok, kembalikan index          |
+| 1       | 0    | 4     | 2   | 4             | 4      | Cocok, kembalikan index           |
 
-Langkah-langkah Binary Search:
-Iterasi 1:
-Left: 0, Right: 4, Mid: 2
-Elemen Tengah: 4
-Target: 4
-Keterangan: Cocok, kembalikan index 2
-
-Contoh Pythonnya:
+Contoh kode python:
+```python=
 def binarySearch(arr, target):
     left, right = 0, len(arr) - 1
     while left <= right:
@@ -58,13 +57,13 @@ def binarySearch(arr, target):
             right = mid - 1
     return -1
 
+# Contoh penggunaan
 arr = [2, 3, 4, 5, 8]
 target = 4
 index = binarySearch(arr, target)
 print(f"Index dari target {target} adalah {index}")
 
-
-
+```
 ## Big O Algoritma
 Big O Notation adalah cara untuk mengukur kompleksitas waktu atau ruang dari sebuah algoritma dalam hal ukuran input. Ini memberikan gambaran seberapa cepat atau lambat algoritma tumbuh seiring dengan peningkatan ukuran input.
 
@@ -94,6 +93,22 @@ Contoh Penghitungan Big O: Misalkan kita memiliki daftar dengan 10 elemen dan me
 | 9       | 0          | 8      | Tidak cocok    |
 | 10      | 8          | 8      | Cocok, selesai |
 
+Contoh kode python:
+```python=
+def sequentialSearch(arr, target):
+    for i in range(len(arr)):
+        print(f"Iterasi: {i + 1}, Elemen: {arr[i]}, Target: {target}, Keterangan: {'Cocok, selesai' if arr[i] == target else 'Tidak cocok'}")
+        if arr[i] == target:
+            return i
+    return -1
+
+# Contoh penggunaan
+arr = [5, 3, 1, 4, 6, 7, 2, 9, 0, 8]
+target = 8
+index = sequentialSearch(arr, target)
+print(f"Index dari target {target} adalah {index}")
+
+```
 Jumlah total perbandingan dalam kasus terburuk adalah 10, sehingga kompleksitas waktunya adalah $O(n)$ dan kompleksitas ruangnya adalah $O(1)$.
 
 ## Referensi
