@@ -1,4 +1,4 @@
-# HIMPUNAN
+# Himpunan
 
 Menurut buku "Teori Himpunan" oleh Darwanto dkk., himpunan adalah kumpulan objek atau benda dengan definisi yang jelas, di mana setiap anggotanya dapat dibedakan dari yang bukan bagian himpunan. Anggota himpunan disebut "∈", sementara yang bukan anggota disebut "∉", menurut CNN Indonesia.
 

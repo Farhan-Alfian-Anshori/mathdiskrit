@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Aljabar Boolean dan Gerbang Logika &#8212; My sample book</title>
+    <title>Algoritma &#8212; My sample book</title>
   
   
   
@@ -175,10 +175,10 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">HIMPUNAN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Himpunan.html">Himpunan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Logika.html">Logika Matematika</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Algoritma.html">Algoritma</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aljabar Boolean dan Gerbang Logika</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Algoritma</a></li>
 </ul>
 
     </div>
@@ -364,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Aljabar Boolean dan Gerbang Logika</h1>
+    <h1>Algoritma</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,16 +374,12 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aljabar-boolean">Aljabar Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner-uner">Operator Biner &amp; Uner:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat">Manfaat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerbang-logika-logic-gates">Gerbang Logika (Logic Gates)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-logic-gates">Jenis-Jenis Logic Gates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential Search</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudocode">Pseudocode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary Search</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O Algoritma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari Algoritma Sequential Search</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
 </ul>
             </nav>
@@ -396,340 +392,249 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="aljabar-boolean-dan-gerbang-logika">
-<h1>Aljabar Boolean dan Gerbang Logika<a class="headerlink" href="#aljabar-boolean-dan-gerbang-logika" title="Link to this heading">#</a></h1>
-<section id="aljabar-boolean">
-<h2>Aljabar Boolean<a class="headerlink" href="#aljabar-boolean" title="Link to this heading">#</a></h2>
-<p>Pengertian Aljabar Boolean: Aljabar Boolean adalah cabang matematika yang berkaitan dengan operasi logika dan variabel biner. Variabel biner ini hanya memiliki dua nilai, yaitu 1 (benar) dan 0 (salah). Aljabar Boolean digunakan untuk menyederhanakan dan menganalisis rangkaian logika.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="algoritma">
+<h1>Algoritma<a class="headerlink" href="#algoritma" title="Link to this heading">#</a></h1>
+<section id="definisi">
+<h2>Definisi<a class="headerlink" href="#definisi" title="Link to this heading">#</a></h2>
+<p>Algoritma adalah serangkaian instruksi atau langkah-langkah yang jelas dan terperinci untuk menyelesaikan masalah atau menjalankan tugas tertentu. Algoritma dapat diimplementasikan dalam berbagai bahasa pemrograman untuk memecahkan masalah komputasi. Contoh sederhana dari algoritma adalah resep masakan, di mana terdapat langkah-langkah berurutan untuk mencapai hasil akhir.</p>
 </section>
-<section id="tujuan">
-<h2>Tujuan<a class="headerlink" href="#tujuan" title="Link to this heading">#</a></h2>
-<p>Tujuan utama Aljabar Boolean adalah untuk menyediakan metode matematika dalam mendesain dan menganalisis sirkuit digital. Hal ini memungkinkan insinyur untuk menyederhanakan fungsi logika dan meminimalkan penggunaan gerbang logika dalam rangkaian elektronik.</p>
-</section>
-<section id="operator-biner-uner">
-<h2>Operator Biner &amp; Uner:<a class="headerlink" href="#operator-biner-uner" title="Link to this heading">#</a></h2>
-<section id="operator-biner">
-<h3>Operator Biner:<a class="headerlink" href="#operator-biner" title="Link to this heading">#</a></h3>
-<p>AND (<span class="math notranslate nohighlight">\(\cdot\)</span> atau ∗): Menghasilkan 1 jika kedua operannya 1. $<span class="math notranslate nohighlight">\(A \cdot B = C\)</span>$</p>
-<p>Contoh:</p>
+<section id="algoritma-sequential-search">
+<h2>Algoritma Sequential Search<a class="headerlink" href="#algoritma-sequential-search" title="Link to this heading">#</a></h2>
+<p>Algoritma Sequential Search adalah metode pencarian yang memeriksa setiap elemen dalam daftar satu per satu sampai elemen yang dicari ditemukan atau daftar berakhir. Ini adalah metode pencarian paling sederhana tetapi kurang efisien untuk daftar yang sangat besar.</p>
+<p>Contoh Algoritma Sequential Search: Misalkan kita memiliki daftar [5, 3, 8, 4, 2] dan kita mencari elemen 4:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A \cdot B\)</span></p></th>
+<tr class="row-odd"><th class="head"><p>Index</p></th>
+<th class="head"><p>Elemen</p></th>
+<th class="head"><p>Target</p></th>
+<th class="head"><p>Keterangan</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>5</p></td>
+<td><p>4</p></td>
+<td><p>Tidak cocok</p></td>
 </tr>
 <tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
+<td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>8</p></td>
+<td><p>4</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>Cocok, kembalikan index</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>4</p></td>
+<td><p>(Tidak dicapai)</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>OR (+): Menghasilkan 1 jika salah satu atau kedua operannya 1. $<span class="math notranslate nohighlight">\(A + B = C\)</span>$</p>
-<p>Contoh:</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A + B\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>XOR (<span class="math notranslate nohighlight">\(\oplus\)</span>): Menghasilkan 1 jika kedua operan berbeda. $<span class="math notranslate nohighlight">\(A \oplus B = C\)</span>$</p>
-<p>Contoh:</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A \oplus B\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def sequentialSearch(arr, target):
+    for i in range(len(arr)):
+        if arr[i] == target:
+            return i
+    return -1
+
+# Contoh penggunaan
+arr = [5, 3, 8, 4, 2]
+target = 4
+print(sequentialSearch(arr, target))  # Output: 3
+
+</pre></div>
 </div>
 </section>
-<section id="operator-uner">
-<h3>Operator Uner:<a class="headerlink" href="#operator-uner" title="Link to this heading">#</a></h3>
-<p>NOT (<span class="math notranslate nohighlight">\(\overline{A}\)</span> atau <span class="math notranslate nohighlight">\(\neg A\)</span>): Menghasilkan kebalikan dari nilai operan. $<span class="math notranslate nohighlight">\(\overline{A} = A'\)</span>$</p>
-<p>Contoh:</p>
+<section id="pseudocode">
+<h2>Pseudocode<a class="headerlink" href="#pseudocode" title="Link to this heading">#</a></h2>
+<p>Pseudocode adalah cara menulis algoritma dengan menggunakan bahasa yang mirip dengan bahasa manusia, namun tetap menggambarkan logika pemrograman. Pseudocode tidak mengikuti aturan sintaksis bahasa pemrograman tertentu, sehingga lebih mudah dipahami oleh siapa saja, baik yang berpengalaman maupun pemula. Pseudocode berfungsi sebagai panduan sebelum menulis kode nyata.</p>
+</section>
+<section id="algoritma-binary-search">
+<h2>Algoritma Binary Search<a class="headerlink" href="#algoritma-binary-search" title="Link to this heading">#</a></h2>
+<p>Algoritma Binary Search adalah metode pencarian yang efisien pada daftar yang sudah diurutkan. Algoritma ini membagi daftar menjadi dua bagian, membandingkan elemen tengah dengan target, dan mengulangi proses pada setengah bagian yang relevan. Binary Search lebih cepat dibandingkan Sequential Search untuk daftar yang besar.</p>
+<p>Contoh Algoritma Binary Search: Misalkan kita memiliki daftar [2, 3, 4, 5, 8] yang sudah diurutkan, dan kita mencari elemen 4:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\overline{A}\)</span></p></th>
+<tr class="row-odd"><th class="head"><p>Iterasi</p></th>
+<th class="head"><p>Left</p></th>
+<th class="head"><p>Right</p></th>
+<th class="head"><p>Mid</p></th>
+<th class="head"><p>Elemen Tengah</p></th>
+<th class="head"><p>Target</p></th>
+<th class="head"><p>Keterangan</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
+<tr class="row-even"><td><p>1</p></td>
 <td><p>0</p></td>
+<td><p>4</p></td>
+<td><p>2</p></td>
+<td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>Cocok, kembalikan index</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def binarySearch(arr, target):
+    left, right = 0, len(arr) - 1
+    while left &lt;= right:
+        mid = (left + right) // 2
+        print(f&quot;Iterasi: {arr[left:right+1]}, Left: {left}, Right: {right}, Mid: {mid}, Elemen Tengah: {arr[mid]}&quot;)
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] &lt; target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+
+# Contoh penggunaan
+arr = [2, 3, 4, 5, 8]
+target = 4
+index = binarySearch(arr, target)
+print(f&quot;Index dari target {target} adalah {index}&quot;)
+
+</pre></div>
+</div>
+</section>
+<section id="big-o-algoritma">
+<h2>Big O Algoritma<a class="headerlink" href="#big-o-algoritma" title="Link to this heading">#</a></h2>
+<p>Big O Notation adalah cara untuk mengukur kompleksitas waktu atau ruang dari sebuah algoritma dalam hal ukuran input. Ini memberikan gambaran seberapa cepat atau lambat algoritma tumbuh seiring dengan peningkatan ukuran input.</p>
+<p>Tabel Big O Notation:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Algoritma</p></th>
+<th class="head"><p>Kompleksitas Waktu</p></th>
+<th class="head"><p>Kompleksitas Ruang</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Sequential Search</p></td>
+<td><p><span class="math notranslate nohighlight">\(O(n)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(O(1)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Binary Search</p></td>
+<td><p><span class="math notranslate nohighlight">\(O(\log n)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(O(1)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Bubble Sort</p></td>
+<td><p><span class="math notranslate nohighlight">\(O(n^2)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(O(1)\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Merge Sort</p></td>
+<td><p><span class="math notranslate nohighlight">\(O(n \log n)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(O(n)\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Quick Sort</p></td>
+<td><p><span class="math notranslate nohighlight">\(O(n \log n)\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(O(\log n)\)</span></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-</section>
-<section id="manfaat">
-<h2>Manfaat<a class="headerlink" href="#manfaat" title="Link to this heading">#</a></h2>
-<p>Aljabar Boolean sangat berguna dalam pemrograman, terutama dalam pengambilan keputusan dan pernyataan kondisional. Contoh penggunaan termasuk:</p>
-<p>-Mengontrol alur program dengan pernyataan if-else.</p>
-<p>-Meningkatkan efisiensi kode dengan menyederhanakan ekspresi logika.</p>
-<p>-Memvalidasi kondisi tertentu dalam algoritma pencarian dan pengurutan.</p>
-</section>
-<section id="gerbang-logika-logic-gates">
-<h2>Gerbang Logika (Logic Gates)<a class="headerlink" href="#gerbang-logika-logic-gates" title="Link to this heading">#</a></h2>
-<p>Gerbang logika adalah blok dasar dari rangkaian digital yang melakukan operasi logika pada satu atau lebih sinyal input biner dan menghasilkan sinyal output biner. Gerbang logika digunakan untuk membangun sirkuit digital yang dapat melakukan berbagai fungsi komputasi.</p>
-</section>
-<section id="jenis-jenis-logic-gates">
-<h2>Jenis-Jenis Logic Gates:<a class="headerlink" href="#jenis-jenis-logic-gates" title="Link to this heading">#</a></h2>
-<p>Gerbang AND: Menghasilkan output 1 hanya jika semua inputnya 1.</p>
+<section id="hitung-big-o-dari-algoritma-sequential-search">
+<h2>Hitung Big O dari Algoritma Sequential Search<a class="headerlink" href="#hitung-big-o-dari-algoritma-sequential-search" title="Link to this heading">#</a></h2>
+<p>Algoritma Sequential Search memiliki kompleksitas waktu <span class="math notranslate nohighlight">\(O(n)\)</span> karena dalam kasus terburuk, setiap elemen dalam daftar harus diperiksa sekali. Kompleksitas ruangnya adalah <span class="math notranslate nohighlight">\(O(1)\)</span> karena tidak membutuhkan ruang tambahan yang bergantung pada ukuran input.</p>
+<p>Contoh Penghitungan Big O: Misalkan kita memiliki daftar dengan 10 elemen dan mencari elemen yang berada di posisi terakhir:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A \cdot B\)</span></p></th>
+<tr class="row-odd"><th class="head"><p>Iterasi</p></th>
+<th class="head"><p>Elemen</p></th>
+<th class="head"><p>Target</p></th>
+<th class="head"><p>Keterangan</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
 <tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
+<td><p>5</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
 </tr>
-<tr class="row-odd"><td><p>1</p></td>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>3</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
 <td><p>1</p></td>
-<td><p>1</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>6</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>7</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>2</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>9</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>0</p></td>
+<td><p>8</p></td>
+<td><p>Tidak cocok</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>8</p></td>
+<td><p>8</p></td>
+<td><p>Cocok, selesai</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Gerbang OR: Menghasilkan output 1 jika salah satu atau semua inputnya 1.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A + B\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
+<p>Contoh kode python:</p>
+<div class="highlight-python= notranslate"><div class="highlight"><pre><span></span>def sequentialSearch(arr, target):
+    for i in range(len(arr)):
+        print(f&quot;Iterasi: {i + 1}, Elemen: {arr[i]}, Target: {target}, Keterangan: {&#39;Cocok, selesai&#39; if arr[i] == target else &#39;Tidak cocok&#39;}&quot;)
+        if arr[i] == target:
+            return i
+    return -1
+
+# Contoh penggunaan
+arr = [5, 3, 1, 4, 6, 7, 2, 9, 0, 8]
+target = 8
+index = sequentialSearch(arr, target)
+print(f&quot;Index dari target {target} adalah {index}&quot;)
+
+</pre></div>
 </div>
-<p>Gerbang NOT:</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\overline{A}\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Gerbang NAND: Menghasilkan output 0 hanya jika semua inputnya 1.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\overline{A \cdot B}\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Gerbang NOR: Menghasilkan output 0 jika salah satu atau semua inputnya 1.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\overline{A + B}\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Gerbang XOR: Menghasilkan output 1 jika inputnya berbeda.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(A \oplus B\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>Gerbang XNOR: Menghasilkan output 1 jika inputnya sama.</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(A\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(B\)</span></p></th>
-<th class="head"><p><span class="math notranslate nohighlight">\(\overline{A \oplus B}\)</span></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>0</p></td>
-<td><p>0</p></td>
-<td><p>1</p></td>
-</tr>
-<tr class="row-odd"><td><p>0</p></td>
-<td><p>1</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>0</p></td>
-<td><p>0</p></td>
-</tr>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>1</p></td>
-<td><p>1</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+<p>Jumlah total perbandingan dalam kasus terburuk adalah 10, sehingga kompleksitas waktunya adalah <span class="math notranslate nohighlight">\(O(n)\)</span> dan kompleksitas ruangnya adalah <span class="math notranslate nohighlight">\(O(1)\)</span>.</p>
 </section>
 <section id="referensi">
 <h2>Referensi<a class="headerlink" href="#referensi" title="Link to this heading">#</a></h2>
-<p>Aljabar Boolean - Pengertian, Hukum, dan Contoh Soal1
-. (2019). Webstudi. Diakses pada 14 Oktober 2024 dari <a class="reference external" href="https://www.webstudi.site/2019/02/aljabar-boolean.html1">https://www.webstudi.site/2019/02/aljabar-boolean.html1</a>
-.</p>
-<p>Gerbang Logika: Pengertian, Jenis dan Simbolnya1
-. (n.d.). Teknik Elektronik. Diakses pada 14 Oktober 2024 dari <a class="reference external" href="https://teknikece.com/gerbang-logika/1">https://teknikece.com/gerbang-logika/1</a>
-.</p>
-<p>Pengertian Gerbang Logika: Fondasi Sistem Digital Modern1
-. (n.d.). Wiki Elektronika. Diakses pada 14 Oktober 2024 dari <a class="reference external" href="https://wikielektronika.com/pengertian-gerbang-logika/1">https://wikielektronika.com/pengertian-gerbang-logika/1</a>
-.</p>
+<p>Referensi:</p>
+<p>Algoritma: Pengertian, Sejarah, Jenis, Fungsi, dan Contohnya. (n.d.). Gramedia Literasi Matematika. Diakses pada 7 Oktober 2024 dari <a class="reference external" href="https://www.gramedia.com/literasi/pengertian-algoritma/">https://www.gramedia.com/literasi/pengertian-algoritma/</a>.</p>
+<p>Algoritma: Definisi, Ciri, Jenis, Struktur dan Contohnya. (2021). <a class="reference external" href="http://Tirto.ID">Tirto.ID</a>. Diakses pada 7 Oktober 2024 dari <a class="reference external" href="https://tirto.id/algoritma-definisi-ciri-jenis-struktur-dan-contohnya-gjgn">https://tirto.id/algoritma-definisi-ciri-jenis-struktur-dan-contohnya-gjgn</a>.</p>
+<p>Algoritma dan Pemrograman: Buku Bahan Ajar. (2021). Google Books. Diakses pada 7 Oktober 2024 dari <a class="reference external" href="https://books.google.com/books?id=2UpEEAAAQBAJ">https://books.google.com/books?id=2UpEEAAAQBAJ</a>.</p>
+<p>Open Library - Buku Algoritma Dan Pemrograman. (n.d.). Telkom University. Diakses pada 7 Oktober 2024 dari <a class="reference external" href="https://openlibrary.telkomuniversity.ac.id/home/catalog/id/165210/slug/buku-algoritma-dan-pemrograman.html">https://openlibrary.telkomuniversity.ac.id/home/catalog/id/165210/slug/buku-algoritma-dan-pemrograman.html</a>.</p>
 </section>
 </section>
 
@@ -788,16 +693,12 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aljabar-boolean">Aljabar Boolean</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan">Tujuan</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner-uner">Operator Biner &amp; Uner:</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-biner">Operator Biner:</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operator-uner">Operator Uner:</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#manfaat">Manfaat</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gerbang-logika-logic-gates">Gerbang Logika (Logic Gates)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-jenis-logic-gates">Jenis-Jenis Logic Gates:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definisi">Definisi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-sequential-search">Algoritma Sequential Search</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudocode">Pseudocode</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algoritma-binary-search">Algoritma Binary Search</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#big-o-algoritma">Big O Algoritma</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hitung-big-o-dari-algoritma-sequential-search">Hitung Big O dari Algoritma Sequential Search</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#referensi">Referensi</a></li>
 </ul>
   </nav></div>
