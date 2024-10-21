@@ -477,3 +477,9 @@ $\overline{A \cap B} = \overline{A} \cup \overline{B}=\{x \mid x \notin A \cap B
 ### Kesimpulan
 
 Hukum De Morgan membantu dalam memanipulasi dan memahami negasi dari operasi gabungan dan irisan pada himpunan. Ini sangat berguna dalam teori himpunan, logika proposisional, dan berbagai aplikasi matematika dan komputer. Dengan memahami hukum ini, Anda dapat lebih mudah mengelola dan bekerja dengan berbagai operasi himpunan dan logika.
+
+# Referensi
+Darwanto dkk. "Teori Himpunan". Repositori Universitas Muhammadiyah Kotabumi. Diakses pada 30 September 2023. https://repository.umko.ac.id/id/eprint/75/?form=MG0AV3
+"Buku Teori Himpunan". Universitas Muhammadiyah Kotabumi. Diakses pada 30 September 2023.https://repository.umko.ac.id/id/eprint/75/1/BUKU%20TEORI%20HIMPUNAN%20FIXX.pdf?form=MG0AV3
+"Himpunan: Pengertian, Anggota, Sifat dan Contoh Soalnya". detikcom. Diakses pada 30 September 2023.
+https://www.detik.com/edu/detikpedia/d-7081709/himpunan-pengertian-anggota-sifat-dan-contoh-soalnya?form=MG0AV3
