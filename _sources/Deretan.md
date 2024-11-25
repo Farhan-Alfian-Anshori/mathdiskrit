@@ -102,98 +102,98 @@ ___
 ![1000122066](https://hackmd.io/_uploads/SJcLauxQyg.jpg)
 
 Jawab:
-1. Rumus 1 (Deret Geometri): $$ \sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1 $$
+1. Rumus 1 (Deret Geometri): $\sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1$
 
 Pembuktian:
 
 -Misalkan $S = \sum_{k=0}^{n} ar^k = a + ar + ar^2 + \dots + ar^n$.
 
--Kalikan kedua sisi dengan $r$: $$ rS = ar + ar^2 + ar^3 + \dots + ar^{n+1} $$
+-Kalikan kedua sisi dengan $r$: $rS = ar + ar^2 + ar^3 + \dots + ar^{n+1}$
 
--Kurangkan persamaan pertama dari yang kedua: $$ S - rS = a - ar^{n+1} $$ $$ S(1 - r) =_ a(1 - r^{n+1}) $$
+-Kurangkan persamaan pertama dari yang kedua: $S - rS = a - ar^{n+1}$ $S(1 - r) =_ a(1 - r^{n+1})$
 
 ___
 
-2. Rumus 2: $$ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} $$
+2. Rumus 2: $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$
 
 Pembuktian:
 
 -Misalkan $S = \sum_{k=1}^{n} k = 1 + 2 + 3 + \dots + n$.
 
 
--Tuliskan $S$ secara terbalik: $$ S = n + (n-1) + (n-2) + \dots + 1 $$
+-Tuliskan $S$ secara terbalik: $S = n + (n-1) + (n-2) + \dots + 1$
 
 
--Jumlahkan kedua barisan: $$ 2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1) $$ $$ 2S = n(n+1) $$
+-Jumlahkan kedua barisan: $2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1)$ $2S = n(n+1)$
 
 
--Bagi kedua sisi dengan $2$: $$ S = \frac{n(n+1)}{2} $$
+-Bagi kedua sisi dengan $2$: $S = \frac{n(n+1)}{2}$
 
 ___
 
-3. Rumus 3: $$ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} $$
+3. Rumus 3: $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$
 
 Pembuktian:
 
 -Gunakan induksi matematika:
 
 Basis: Untuk $n = 1$,
-$$ \sum_{k=1}^{1} k^2 = 1^2 = 1 $$ Rumus memberikan:
-$$ \frac{1(1+1)(2\cdot1+1)}{6} = 1 $$ Jadi, benar untuk $n = 1$.
+$\sum_{k=1}^{1} k^2 = 1^2 = 1$ Rumus memberikan:
+$\frac{1(1+1)(2\cdot1+1)}{6} = 1$ Jadi, benar untuk $n$ = 1.
 
-Induksi: Misalkan benar untuk $n$, yaitu: $$ \sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6} $$ Buktikan untuk $n+1$:
-$$ \sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + (n+1)^2 $$ Substitusi rumus induksi: $$ \frac{n(n+1)(2n+1)}{6} + (n+1)^2 $$ Faktorkan $(n+1)$: $$ \frac{(n+1)\left[n(2n+1) + 6(n+1)\right]}{6} $$ Sederhanakan: $$ \frac{(n+1)(n+2)(2n+3)}{6} $$ Jadi terbukti benar untuk $n+1$.
+Induksi: Misalkan benar untuk $n$, yaitu: $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$ Buktikan untuk $n+1$:
+$\sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + (n+1)^2$ Substitusi rumus induksi: $\frac{n(n+1)(2n+1)}{6} + (n+1)^2$ Faktorkan $(n+1)$: $\frac{(n+1)\left[n(2n+1) + 6(n+1)\right]}{6}$ Sederhanakan: $\frac{(n+1)(n+2)(2n+3)}{6}$ Jadi terbukti benar untuk $n+1$.
 
 ___
 
-4. Rumus 4: $$ \sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2 $$
+4. Rumus 4: $\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$
 
 Pembuktian:
 
--Misalkan $S = \sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \dots + n^3$.
+-Misalkan $S$ = $\sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \dots + n^3$.
 
--Gunakan rumus jumlah bilangan bulat: $$ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} $$
+-Gunakan rumus jumlah bilangan bulat: $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$
 
--Kuadratkan kedua sisi: $$ \left(\sum_{k=1}^{n} k\right)^2 = \left(\frac{n(n+1)}{2}\right)^2 $$
+-Kuadratkan kedua sisi: $\left(\sum_{k=1}^{n} k\right)^2 = \left(\frac{n(n+1)}{2}\right)^2$
 
--Berdasarkan hasil, terbukti bahwa: $$ \sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2 $$
+-Berdasarkan hasil, terbukti bahwa: $\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$
 
 ___
 
-5. Rumus 5 (Deret Geometri dengan $|x| < 1$): $$ \sum_{k=0}^{\infty} x^k = \frac{1}{1-x} $$
+5. Rumus 5 (Deret Geometri dengan $|x| < 1$): $\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}$
 
 Pembuktian:
 
 -Misalkan $S = \sum_{k=0}^{\infty} x^k = 1 + x + x^2 + x^3 + \dots$
 
 
--Kalikan $S$ dengan $x$: $$ xS = x + x^2 + x^3 + \dots $$
+-Kalikan $S$ dengan $x$: $xS = x + x^2 + x^3 + \dots$
 
 
--Kurangkan kedua persamaan: $$ S - xS = 1 $$ $$ S(1 - x) = 1 $$
+-Kurangkan kedua persamaan: $S - xS = 1$ $S(1 - x) = 1$
 
 
--Bagi kedua sisi dengan $(1 - x)$ (dengan $|x| < 1$): $$ S = \frac{1}{1-x} $$
+-Bagi kedua sisi dengan $(1 - x)$ (dengan $|x| < 1$): $S = \frac{1}{1-x}$
 
 ___
 
-6. Rumus 6 (Turunan Deret Geometri dengan $|x| < 1$): $$ \sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2} $$
+6. Rumus 6 (Turunan Deret Geometri dengan $|x| < 1$): $\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}$
 
 Pembuktian:
 
--Mulai dari deret geometri: $$ \sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \quad |x| < 1 $$
+-Mulai dari deret geometri: $\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \quad |x| < 1$
 
 
--Turunkan kedua sisi terhadap $x$: $$ \frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \frac{d}{dx} \left(\frac{1}{1-x}\right) $$
+-Turunkan kedua sisi terhadap $x$: $\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \frac{d}{dx} \left(\frac{1}{1-x}\right)$
 
 
--Pada sisi kiri: $$ \frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \sum_{k=1}^{\infty} kx^{k-1} $$
+-Pada sisi kiri: $\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \sum_{k=1}^{\infty} kx^{k-1}$
 
 
--Pada sisi kanan: $$ \frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2} $$
+-Pada sisi kanan: $\frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2}$
 
 
--Jadi: $$ \sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2} $$
+-Jadi: $\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}$
 
 ___
 
