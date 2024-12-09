@@ -99,7 +99,15 @@ $\sum_{k=1}^{100} k^2$ = $\sum_{k=1}^{49} k^2$ +$ $\sum_{k=50}^{100} k^2$
 ___
 - TUGAS PEMBUKTIAN Dari 3 rumus dibawah Beberapa sumasi sudah ditemukan rumus penjumlahannya sebagai berikut:
 
-![1000122066](https://hackmd.io/_uploads/SJcLauxQyg.jpg)
+| Sum | Closed Form |
+| -------- | -------- |
+|  $\sum_{k=0}^{n} ar^k =\quad (r \neq 0)$     |$\frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1$    |
+|$\sum_{k=1}^{n} k$| $\frac{n(n+1)}{2}$|
+|$\sum_{k=1}^{n} k^2$| $\frac{n(n+1)(2n+1)}{6}$
+|$\sum_{k=1}^{n} k^3$| $\frac{n^2(n+1)}{4}^2$
+|$\sum_{k=0}^{\infty} x^k$,/$x$\ $< 1$ | $\frac{1}{1-x}$
+|$\sum_{k=1}^{\infty} kx^{k-1}$ ,/x\ <1 |$\frac{1}{(1-x)^2}$
+
 
 Jawab:
 1. Rumus 1 (Deret Geometri): $\sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1$
