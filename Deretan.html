@@ -390,7 +390,13 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-rumus-deret-geometri">Pembuktian Rumus Deret Geometri:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian">Pembuktian:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hasil Akhir:</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>
@@ -524,71 +530,131 @@ Pada Contoh 2 di atas, batas bawah digeser dari 1 menjadi 0, akibatnya:
 </tbody>
 </table>
 </div>
-<p>Jawab:</p>
-<ol class="arabic simple">
-<li><p>Rumus 1 (Deret Geometri): <span class="math notranslate nohighlight">\(\sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=0}^{n} ar^k = a + ar + ar^2 + \dots + ar^n\)</span>.</p>
-<p>-Kalikan kedua sisi dengan <span class="math notranslate nohighlight">\(r\)</span>: <span class="math notranslate nohighlight">\(rS = ar + ar^2 + ar^3 + \dots + ar^{n+1}\)</span></p>
-<p>-Kurangkan persamaan pertama dari yang kedua: <span class="math notranslate nohighlight">\(S - rS = a - ar^{n+1}\)</span> <span class="math notranslate nohighlight">\(S(1 - r) =_ a(1 - r^{n+1})\)</span></p>
+<section id="pembuktian-rumus-deret-geometri">
+<h3>Pembuktian Rumus Deret Geometri:<a class="headerlink" href="#pembuktian-rumus-deret-geometri" title="Link to this heading">#</a></h3>
+<p><strong>Langkah 1: Tulis deretnya</strong><br />
+Mulai dengan bentuk deret geometri:</p>
+<div class="math notranslate nohighlight">
+\[S_n = a + ar + ar^2 + \dots + ar^n\]</div>
+<p><strong>Langkah 2: Kalikan <span class="math notranslate nohighlight">\(( S_n )\)</span> dengan rasio <span class="math notranslate nohighlight">\(( r )\)</span></strong><br />
+Kalikan kedua sisi persamaan dengan <span class="math notranslate nohighlight">\(( r )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[rS_n = ar + ar^2 + ar^3 + \dots + ar^{n+1}\]</div>
+<p><strong>Langkah 3: Kurangi kedua persamaan</strong><br />
+Kurangi <span class="math notranslate nohighlight">\(( S_n )\)</span> dengan <span class="math notranslate nohighlight">\(( rS_n )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_n - rS_n = (a + ar + ar^2 + \dots + ar^n) - (ar + ar^2 + \dots + ar^{n+1})\]</div>
+<p>Semua suku di kanan akan saling menghilangkan, kecuali <span class="math notranslate nohighlight">\(( a )\)</span> dan <span class="math notranslate nohighlight">\(( ar^{n+1} )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_n (1 - r) = a - ar^{n+1}\]</div>
+<p><strong>Langkah 4: Sederhanakan persamaan</strong><br />
+Faktor <span class="math notranslate nohighlight">\(( S_n )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S_n = \frac{a(1 - r^{n+1})}{1 - r}, \quad \text{dengan \( r \neq 1 \)}.\]</div>
+</section>
 <hr class="docutils" />
-<ol class="arabic simple" start="2">
-<li><p>Rumus 2: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k = \frac{n(n+1)}{2}\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=1}^{n} k = 1 + 2 + 3 + \dots + n\)</span>.</p>
-<p>-Tuliskan <span class="math notranslate nohighlight">\(S\)</span> secara terbalik: <span class="math notranslate nohighlight">\(S = n + (n-1) + (n-2) + \dots + 1\)</span></p>
-<p>-Jumlahkan kedua barisan: <span class="math notranslate nohighlight">\(2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1)\)</span> <span class="math notranslate nohighlight">\(2S = n(n+1)\)</span></p>
-<p>-Bagi kedua sisi dengan <span class="math notranslate nohighlight">\(2\)</span>: <span class="math notranslate nohighlight">\(S = \frac{n(n+1)}{2}\)</span></p>
+<section id="hasil-akhir">
+<h3>Hasil Akhir:<a class="headerlink" href="#hasil-akhir" title="Link to this heading">#</a></h3>
+<p>Rumus tertutup dari deret geometri adalah:
+$<span class="math notranslate nohighlight">\(S_n = \frac{a(1 - r^{n+1})}{1 - r}, \quad \text{untuk \( r \neq 1 \)}.\)</span>$</p>
+<p>Rumus ini sangat berguna dalam banyak aplikasi matematika, termasuk analisis keuangan dan pemodelan data.</p>
 <hr class="docutils" />
-<ol class="arabic simple" start="3">
-<li><p>Rumus 3: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Gunakan induksi matematika:</p>
-<p>Basis: Untuk <span class="math notranslate nohighlight">\(n = 1\)</span>,
-<span class="math notranslate nohighlight">\(\sum_{k=1}^{1} k^2 = 1^2 = 1\)</span> Rumus memberikan:
-<span class="math notranslate nohighlight">\(\frac{1(1+1)(2\cdot1+1)}{6} = 1\)</span> Jadi, benar untuk <span class="math notranslate nohighlight">\(n\)</span> = 1.</p>
-<p>Induksi: Misalkan benar untuk <span class="math notranslate nohighlight">\(n\)</span>, yaitu: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span> Buktikan untuk <span class="math notranslate nohighlight">\(n+1\)</span>:
-<span class="math notranslate nohighlight">\(\sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + (n+1)^2\)</span> Substitusi rumus induksi: <span class="math notranslate nohighlight">\(\frac{n(n+1)(2n+1)}{6} + (n+1)^2\)</span> Faktorkan <span class="math notranslate nohighlight">\((n+1)\)</span>: <span class="math notranslate nohighlight">\(\frac{(n+1)\left[n(2n+1) + 6(n+1)\right]}{6}\)</span> Sederhanakan: <span class="math notranslate nohighlight">\(\frac{(n+1)(n+2)(2n+3)}{6}\)</span> Jadi terbukti benar untuk <span class="math notranslate nohighlight">\(n+1\)</span>.</p>
+<p><strong>Soal :</strong>
+Buatlah Pembuktian Rumus Berikut :</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k\]</div>
+<p><strong>Jawab :</strong>
+Rumus yang diberikan adalah jumlah bilangan bulat dari ( k = 1 ) hingga ( n ), yaitu:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k = 1 + 2 + 3 + \dots + n\]</div>
+<p>Rumus ini memiliki bentuk tertutup yang dinyatakan sebagai:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k = \frac{n(n+1)}{2}\]</div>
+<p>Berikut adalah pembuktiannya:</p>
+</section>
 <hr class="docutils" />
-<ol class="arabic simple" start="4">
-<li><p>Rumus 4: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Misalkan <span class="math notranslate nohighlight">\(S\)</span> = <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \dots + n^3\)</span>.</p>
-<p>-Gunakan rumus jumlah bilangan bulat: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k = \frac{n(n+1)}{2}\)</span></p>
-<p>-Kuadratkan kedua sisi: <span class="math notranslate nohighlight">\(\left(\sum_{k=1}^{n} k\right)^2 = \left(\frac{n(n+1)}{2}\right)^2\)</span></p>
-<p>-Berdasarkan hasil, terbukti bahwa: <span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2\)</span></p>
+<section id="pembuktian">
+<h3>Pembuktian:<a class="headerlink" href="#pembuktian" title="Link to this heading">#</a></h3>
+<p><strong>Langkah 1: Tulis deretnya dua kali dengan urutan terbalik</strong><br />
+Tulis jumlah <span class="math notranslate nohighlight">\(( S )\)</span> dua kali, satu dalam urutan asli, dan satu dalam urutan terbalik:</p>
+<div class="math notranslate nohighlight">
+\[S = 1 + 2 + 3 + \dots + n\]</div>
+<div class="math notranslate nohighlight">
+\[S = n + (n-1) + (n-2) + \dots + 1\]</div>
+<p><strong>Langkah 2: Tambahkan kedua persamaan</strong><br />
+Tambahkan kedua persamaan tersebut secara baris demi baris:</p>
+<div class="math notranslate nohighlight">
+\[2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1)\]</div>
+<p>Setiap pasangan menghasilkan jumlah <span class="math notranslate nohighlight">\((n + 1)\)</span>, dan ada total <span class="math notranslate nohighlight">\(( n )\)</span> pasangan:</p>
+<div class="math notranslate nohighlight">
+\[2S = n(n+1)\]</div>
+<p><strong>Langkah 3: Sederhanakan</strong><br />
+Bagi kedua sisi persamaan dengan 2 untuk mendapatkan <span class="math notranslate nohighlight">\(( S )\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[S = \frac{n(n+1)}{2}\]</div>
+</section>
 <hr class="docutils" />
-<ol class="arabic simple" start="5">
-<li><p>Rumus 5 (Deret Geometri dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): <span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Misalkan <span class="math notranslate nohighlight">\(S = \sum_{k=0}^{\infty} x^k = 1 + x + x^2 + x^3 + \dots\)</span></p>
-<p>-Kalikan <span class="math notranslate nohighlight">\(S\)</span> dengan <span class="math notranslate nohighlight">\(x\)</span>: <span class="math notranslate nohighlight">\(xS = x + x^2 + x^3 + \dots\)</span></p>
-<p>-Kurangkan kedua persamaan: <span class="math notranslate nohighlight">\(S - xS = 1\)</span> <span class="math notranslate nohighlight">\(S(1 - x) = 1\)</span></p>
-<p>-Bagi kedua sisi dengan <span class="math notranslate nohighlight">\((1 - x)\)</span> (dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): <span class="math notranslate nohighlight">\(S = \frac{1}{1-x}\)</span></p>
+<section id="id1">
+<h3>Hasil Akhir:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Rumus jumlah bilangan bulat dari 1 hingga ( n ) adalah:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k = \frac{n(n+1)}{2}.\]</div>
+<p>Rumus ini sering digunakan dalam teori bilangan, kombinatorika, dan aplikasi lainnya.</p>
 <hr class="docutils" />
-<ol class="arabic simple" start="6">
-<li><p>Rumus 6 (Turunan Deret Geometri dengan <span class="math notranslate nohighlight">\(|x| &lt; 1\)</span>): <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}\)</span></p></li>
-</ol>
-<p>Pembuktian:</p>
-<p>-Mulai dari deret geometri: <span class="math notranslate nohighlight">\(\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \quad |x| &lt; 1\)</span></p>
-<p>-Turunkan kedua sisi terhadap <span class="math notranslate nohighlight">\(x\)</span>: <span class="math notranslate nohighlight">\(\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \frac{d}{dx} \left(\frac{1}{1-x}\right)\)</span></p>
-<p>-Pada sisi kiri: <span class="math notranslate nohighlight">\(\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \sum_{k=1}^{\infty} kx^{k-1}\)</span></p>
-<p>-Pada sisi kanan: <span class="math notranslate nohighlight">\(\frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2}\)</span></p>
-<p>-Jadi: <span class="math notranslate nohighlight">\(\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}\)</span></p>
+<p><strong>Soal :</strong>
+Buatlah Pembuktian Rumus Berikut</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k^2\]</div>
+<p><strong>Jawab :</strong>
+Rumus yang ditampilkan adalah bentuk jumlah kuadrat dari bilangan bulat pertama hingga <span class="math notranslate nohighlight">\((n)\)</span>, yaitu:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k^2\]</div>
+<p>Rumus umumnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}.\]</div>
+<p><strong>Pembuktian</strong>
+Pembuktian rumus ini dapat dilakukan menggunakan <strong>induksi matematika</strong>.</p>
 <hr class="docutils" />
-<p>Contoh 5: Hitung nilai <span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2\)</span></p>
-<p>Jawaban
-<span class="math notranslate nohighlight">\(\sum_{k=1}^{100} k^2 = \sum_{k=1}^{49} k^2 + \sum_{k=50}^{100} k^2\)</span></p>
-<p><span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2 = \sum_{k=1}^{100} k^2 - \sum_{k=1}^{49} k^2\)</span></p>
-<p>Gunakan rumus:
-<span class="math notranslate nohighlight">\(\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}\)</span></p>
-<p><span class="math notranslate nohighlight">\(\sum_{k=50}^{100} k^2 = \frac{100(101)(201)}{6} - \frac{49(50)(99)}{6}\)</span></p>
-<p><span class="math notranslate nohighlight">\(= 338,350 - 40,425 = 297,925\)</span></p>
+<p><strong>Langkah 1: Basis Induksi</strong>
+Untuk <span class="math notranslate nohighlight">\(( n = 1 )\)</span>, hitunglah sisi kiri dan sisi kanan.</p>
+<ul class="simple">
+<li><p>Sisi kiri:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^1 k^2 = 1^2 = 1.\]</div>
+<ul class="simple">
+<li><p>Sisi kanan:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\frac{1(1+1)(2(1)+1)}{6} = \frac{1 \cdot 2 \cdot 3}{6} = 1.\]</div>
+<p>Jadi, basis induksi benar.</p>
+<hr class="docutils" />
+<p><strong>Langkah 2: Asumsi Induksi</strong>
+Misalkan rumus benar untuk <span class="math notranslate nohighlight">\(( n = m )\)</span>, yaitu:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^m k^2 = \frac{m(m+1)(2m+1)}{6}.\]</div>
+<hr class="docutils" />
+<p><strong>Langkah 3: Pembuktian untuk <span class="math notranslate nohighlight">\(n = m+1\)</span></strong>
+Tambahkan suku berikutnya (<span class="math notranslate nohighlight">\((m+1)^2\)</span>) pada kedua sisi asumsi induksi:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{m+1} k^2 = \sum_{k=1}^m k^2 + (m+1)^2.\]</div>
+<p>Dari asumsi induksi:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{m+1} k^2 = \frac{m(m+1)(2m+1)}{6} + (m+1)^2.\]</div>
+<p>Faktor <span class="math notranslate nohighlight">\((m+1)\)</span> dari kedua suku:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{m+1} k^2 = \frac{(m+1) \left[ m(2m+1) + 6(m+1) \right]}{6}.\]</div>
+<p>Sederhanakan ekspresi dalam kurung:</p>
+<div class="math notranslate nohighlight">
+\[m(2m+1) + 6(m+1) = 2m^2 + m + 6m + 6 = 2m^2 + 7m + 6.\]</div>
+<p>Faktorkan:</p>
+<div class="math notranslate nohighlight">
+\[2m^2 + 7m + 6 = (m+2)(2m+3).\]</div>
+<p>Substitusikan kembali:</p>
+<div class="math notranslate nohighlight">
+\[\sum_{k=1}^{m+1} k^2 = \frac{(m+1)(m+2)(2m+3)}{6}.\]</div>
+<p>Ini sesuai dengan bentuk rumus untuk <span class="math notranslate nohighlight">\(n = m+1\)</span>. Maka, langkah induksi terbukti.</p>
+</section>
 </section>
 <section id="sumasi-ganda">
 <h2>Sumasi ganda<a class="headerlink" href="#sumasi-ganda" title="Link to this heading">#</a></h2>
@@ -862,7 +928,13 @@ a \cdot b &amp;= b + b + \ldots + b \quad \text{(a kali)} \\
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deretan-sequence">Deretan (sequence)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-deretan">Penjumlahan Deretan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian-rumus-deret-geometri">Pembuktian Rumus Deret Geometri:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hasil-akhir">Hasil Akhir:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pembuktian">Pembuktian:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Hasil Akhir:</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sumasi-ganda">Sumasi ganda</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rekursi">Rekursi</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fungsi-rekursif">Fungsi Rekursif</a></li>

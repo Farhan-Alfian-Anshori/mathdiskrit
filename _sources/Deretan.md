@@ -108,116 +108,158 @@ ___
 |$\sum_{k=0}^{\infty} x^k$,/$x$\ $< 1$ | $\frac{1}{1-x}$
 |$\sum_{k=1}^{\infty} kx^{k-1}$ ,/x\ <1 |$\frac{1}{(1-x)^2}$
 
+### Pembuktian Rumus Deret Geometri:
+**Langkah 1: Tulis deretnya**  
+Mulai dengan bentuk deret geometri:
 
-Jawab:
-1. Rumus 1 (Deret Geometri): $\sum_{k=0}^{n} ar^k = \frac{ar^{n+1} - a}{r - 1}, \quad r \neq 1$
+$$S_n = a + ar + ar^2 + \dots + ar^n$$
 
-Pembuktian:
+**Langkah 2: Kalikan $( S_n )$ dengan rasio $( r )$**  
+Kalikan kedua sisi persamaan dengan $( r )$:
 
--Misalkan $S = \sum_{k=0}^{n} ar^k = a + ar + ar^2 + \dots + ar^n$.
+$$rS_n = ar + ar^2 + ar^3 + \dots + ar^{n+1}$$
 
--Kalikan kedua sisi dengan $r$: $rS = ar + ar^2 + ar^3 + \dots + ar^{n+1}$
+**Langkah 3: Kurangi kedua persamaan**  
+Kurangi $( S_n )$ dengan $( rS_n )$:
 
--Kurangkan persamaan pertama dari yang kedua: $S - rS = a - ar^{n+1}$ $S(1 - r) =_ a(1 - r^{n+1})$
+$$S_n - rS_n = (a + ar + ar^2 + \dots + ar^n) - (ar + ar^2 + \dots + ar^{n+1})$$
 
-___
+Semua suku di kanan akan saling menghilangkan, kecuali $( a )$ dan $( ar^{n+1} )$:
 
-2. Rumus 2: $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$
+$$S_n (1 - r) = a - ar^{n+1}$$
 
-Pembuktian:
+**Langkah 4: Sederhanakan persamaan**  
+Faktor $( S_n )$:
 
--Misalkan $S = \sum_{k=1}^{n} k = 1 + 2 + 3 + \dots + n$.
+$$S_n = \frac{a(1 - r^{n+1})}{1 - r}, \quad \text{dengan \( r \neq 1 \)}.$$
 
+---
 
--Tuliskan $S$ secara terbalik: $S = n + (n-1) + (n-2) + \dots + 1$
+### Hasil Akhir:
+Rumus tertutup dari deret geometri adalah:
+$$S_n = \frac{a(1 - r^{n+1})}{1 - r}, \quad \text{untuk \( r \neq 1 \)}.$$
 
+Rumus ini sangat berguna dalam banyak aplikasi matematika, termasuk analisis keuangan dan pemodelan data.
 
--Jumlahkan kedua barisan: $2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1)$ $2S = n(n+1)$
+---
 
+**Soal :**
+Buatlah Pembuktian Rumus Berikut : 
 
--Bagi kedua sisi dengan $2$: $S = \frac{n(n+1)}{2}$
+$$\sum_{k=1}^n k$$
 
-___
+**Jawab :**
+Rumus yang diberikan adalah jumlah bilangan bulat dari \( k = 1 \) hingga \( n \), yaitu:
 
-3. Rumus 3: $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$
+$$\sum_{k=1}^n k = 1 + 2 + 3 + \dots + n$$
 
-Pembuktian:
+Rumus ini memiliki bentuk tertutup yang dinyatakan sebagai:
 
--Gunakan induksi matematika:
+$$\sum_{k=1}^n k = \frac{n(n+1)}{2}$$
 
-Basis: Untuk $n = 1$,
-$\sum_{k=1}^{1} k^2 = 1^2 = 1$ Rumus memberikan:
-$\frac{1(1+1)(2\cdot1+1)}{6} = 1$ Jadi, benar untuk $n$ = 1.
+Berikut adalah pembuktiannya:
 
-Induksi: Misalkan benar untuk $n$, yaitu: $\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$ Buktikan untuk $n+1$:
-$\sum_{k=1}^{n+1} k^2 = \sum_{k=1}^{n} k^2 + (n+1)^2$ Substitusi rumus induksi: $\frac{n(n+1)(2n+1)}{6} + (n+1)^2$ Faktorkan $(n+1)$: $\frac{(n+1)\left[n(2n+1) + 6(n+1)\right]}{6}$ Sederhanakan: $\frac{(n+1)(n+2)(2n+3)}{6}$ Jadi terbukti benar untuk $n+1$.
+---
 
-___
+### Pembuktian:
+**Langkah 1: Tulis deretnya dua kali dengan urutan terbalik**  
+Tulis jumlah $( S )$ dua kali, satu dalam urutan asli, dan satu dalam urutan terbalik:
 
-4. Rumus 4: $\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$
+$$S = 1 + 2 + 3 + \dots + n$$
 
-Pembuktian:
+$$S = n + (n-1) + (n-2) + \dots + 1$$
 
--Misalkan $S$ = $\sum_{k=1}^{n} k^3 = 1^3 + 2^3 + 3^3 + \dots + n^3$.
+**Langkah 2: Tambahkan kedua persamaan**  
+Tambahkan kedua persamaan tersebut secara baris demi baris:
 
--Gunakan rumus jumlah bilangan bulat: $\sum_{k=1}^{n} k = \frac{n(n+1)}{2}$
+$$2S = (1 + n) + (2 + (n-1)) + (3 + (n-2)) + \dots + (n + 1)$$
 
--Kuadratkan kedua sisi: $\left(\sum_{k=1}^{n} k\right)^2 = \left(\frac{n(n+1)}{2}\right)^2$
+Setiap pasangan menghasilkan jumlah $(n + 1)$, dan ada total $( n )$ pasangan:
 
--Berdasarkan hasil, terbukti bahwa: $\sum_{k=1}^{n} k^3 = \left(\frac{n(n+1)}{2}\right)^2$
+$$2S = n(n+1)$$
 
-___
+**Langkah 3: Sederhanakan**  
+Bagi kedua sisi persamaan dengan 2 untuk mendapatkan $( S )$:
 
-5. Rumus 5 (Deret Geometri dengan $|x| < 1$): $\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}$
+$$S = \frac{n(n+1)}{2}$$
 
-Pembuktian:
+---
 
--Misalkan $S = \sum_{k=0}^{\infty} x^k = 1 + x + x^2 + x^3 + \dots$
+### Hasil Akhir:
+Rumus jumlah bilangan bulat dari 1 hingga \( n \) adalah:
 
+$$\sum_{k=1}^n k = \frac{n(n+1)}{2}.$$
 
--Kalikan $S$ dengan $x$: $xS = x + x^2 + x^3 + \dots$
+Rumus ini sering digunakan dalam teori bilangan, kombinatorika, dan aplikasi lainnya.
 
+---
+**Soal :**
+Buatlah Pembuktian Rumus Berikut
 
--Kurangkan kedua persamaan: $S - xS = 1$ $S(1 - x) = 1$
+$$\sum_{k=1}^n k^2$$
 
+**Jawab :**
+Rumus yang ditampilkan adalah bentuk jumlah kuadrat dari bilangan bulat pertama hingga $(n)$, yaitu:
 
--Bagi kedua sisi dengan $(1 - x)$ (dengan $|x| < 1$): $S = \frac{1}{1-x}$
+$$\sum_{k=1}^n k^2$$
 
-___
+Rumus umumnya adalah:
 
-6. Rumus 6 (Turunan Deret Geometri dengan $|x| < 1$): $\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}$
+$$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}.$$
 
-Pembuktian:
+**Pembuktian**
+Pembuktian rumus ini dapat dilakukan menggunakan **induksi matematika**.
 
--Mulai dari deret geometri: $\sum_{k=0}^{\infty} x^k = \frac{1}{1-x}, \quad |x| < 1$
+---
 
+**Langkah 1: Basis Induksi**
+Untuk $( n = 1 )$, hitunglah sisi kiri dan sisi kanan.
 
--Turunkan kedua sisi terhadap $x$: $\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \frac{d}{dx} \left(\frac{1}{1-x}\right)$
+- Sisi kiri:
 
+$$\sum_{k=1}^1 k^2 = 1^2 = 1.$$
 
--Pada sisi kiri: $\frac{d}{dx} \left(\sum_{k=0}^{\infty} x^k\right) = \sum_{k=1}^{\infty} kx^{k-1}$
+- Sisi kanan:
 
+$$\frac{1(1+1)(2(1)+1)}{6} = \frac{1 \cdot 2 \cdot 3}{6} = 1.$$
 
--Pada sisi kanan: $\frac{d}{dx} \left(\frac{1}{1-x}\right) = \frac{1}{(1-x)^2}$
+Jadi, basis induksi benar.
 
+---
 
--Jadi: $\sum_{k=1}^{\infty} kx^{k-1} = \frac{1}{(1-x)^2}$
+**Langkah 2: Asumsi Induksi**
+Misalkan rumus benar untuk $( n = m )$, yaitu:
 
-___
+$$\sum_{k=1}^m k^2 = \frac{m(m+1)(2m+1)}{6}.$$
 
-Contoh 5: Hitung nilai $\sum_{k=50}^{100} k^2$
+---
 
-Jawaban
-$\sum_{k=1}^{100} k^2 = \sum_{k=1}^{49} k^2 + \sum_{k=50}^{100} k^2$
+**Langkah 3: Pembuktian untuk $n = m+1$**
+Tambahkan suku berikutnya ($(m+1)^2$) pada kedua sisi asumsi induksi:
 
-$\sum_{k=50}^{100} k^2 = \sum_{k=1}^{100} k^2 - \sum_{k=1}^{49} k^2$
+$$\sum_{k=1}^{m+1} k^2 = \sum_{k=1}^m k^2 + (m+1)^2.$$
 
-Gunakan rumus:
-$\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}$
+Dari asumsi induksi:
 
-$\sum_{k=50}^{100} k^2 = \frac{100(101)(201)}{6} - \frac{49(50)(99)}{6}$
+$$\sum_{k=1}^{m+1} k^2 = \frac{m(m+1)(2m+1)}{6} + (m+1)^2.$$
 
-$= 338,350 - 40,425 = 297,925$
+Faktor $(m+1)$ dari kedua suku:
+
+$$\sum_{k=1}^{m+1} k^2 = \frac{(m+1) \left[ m(2m+1) + 6(m+1) \right]}{6}.$$
+
+Sederhanakan ekspresi dalam kurung:
+
+$$m(2m+1) + 6(m+1) = 2m^2 + m + 6m + 6 = 2m^2 + 7m + 6.$$
+
+Faktorkan:
+
+$$2m^2 + 7m + 6 = (m+2)(2m+3).$$
+
+Substitusikan kembali:
+
+$$\sum_{k=1}^{m+1} k^2 = \frac{(m+1)(m+2)(2m+3)}{6}.$$
+
+Ini sesuai dengan bentuk rumus untuk $n = m+1$. Maka, langkah induksi terbukti.
 
 ## Sumasi ganda
 - Di dalam algoritma, kita perlu menghitung berapa kali suatu operasi tertentu dilakukan di dalam sebuah kalang bersarang (nested loop). Penjumlahan semua operasi di dalam kalang bersarang dinyatakan dalam bentuk sumasi ganda.
