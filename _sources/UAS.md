@@ -1,3 +1,4 @@
+### UAS
 ## Soal 1
 | $NO$ | $P$ | $Q$ | $R$ | $S$ | $P \rightarrow Q$ | $R \rightarrow S$ | ($P \rightarrow Q$) $\rightarrow$ ($R \rightarrow S$) |
 | ---- | --- | --- | --- | --- | --- | --- | --- |
